@@ -1,0 +1,68 @@
+{
+    "Name": null,
+    "Age": 45,
+    "Gender": "male",
+    "Address": null,
+    "PhoneNumber": null,
+    "Email": null,
+    "Occupation": "accountant",
+    "InsuranceCompany": null,
+    "InsurancePolicyNumber": null,
+    "PrimaryCarePhysician": "family doc",
+    "SmokingHistory": [
+      true,
+      "two packs a week"
+    ],
+    "AlcoholHistory": [
+      true,
+      "a two-four on a weekend"
+    ],
+    "DrugHistory": [
+      false,
+      null
+    ],
+    "HazardousOccupation": [
+      false,
+      null
+    ],
+    "SexualActivity": [
+      false,
+      null
+    ],
+    "DietaryRestriction": [
+      false,
+      null
+    ],
+    "Allergies": [
+      {
+        "name": "penicillin",
+        "type": "Medicine"
+      }
+    ],
+    "Medications": [
+      "Rosuvastatin",
+      "Metformin",
+      "Sitagliptin"
+    ],
+    "PreviousHospitalizations": [
+      "sinus surgery in teens"
+    ],
+    "MentalHealthHistory": [
+      null
+    ],
+    "FamilyMedicalHistory": [
+      "mother's side: diabetes, high blood pressure, cholesterol",
+      "father's side: one aunt with lung cancer"
+    ],
+    "ReasonForVisit": "rash on right leg",
+    "CurrentSymptoms": [
+      "swelling",
+      "redness",
+      "pain",
+      "leaking white stuff",
+      "feeling hot",
+      "less energy"
+    ],
+    "AdditionalComments": "Patient is concerned about his diabetes management."
+  }
+  

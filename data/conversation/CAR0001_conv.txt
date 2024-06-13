@@ -1,0 +1,124 @@
+Doctor: What brought you in today?
+Patient: Sure. I'm just having a lot of chest pain, and so I thought I should get it checked out.
+Doctor: OK. And before we start, could you remind me of your gender and age?
+Patient: Sure. 39. I'm a male.
+Doctor: OK. And so when did this chest pain start?
+Patient: It started last night, but it's becoming sharper.
+Doctor: OK. And where is this pain located?
+Patient: It's located on the left side of my chest.
+Doctor: OK. And so how long has it been going on for, than if it started last night?
+Patient: So I guess it would be a couple hours now, maybe like eight.
+Doctor: OK. Has it been constant throughout that time, or changing?
+Patient: I would say it's been pretty constant, yeah.
+Doctor: OK. And how would you describe the pain? People will use words sometimes like sharp, burning, achy.
+Patient: I'd say it's pretty sharp, yeah. Sharp.
+Doctor: OK. Anything that you have done, tried since last night, that's made the pain better?
+Patient: Not laying down, helps.
+Doctor: OK. So do you find laying down makes the pain worse?
+Patient: Yes, definitely.
+Doctor: OK. Do you find that the pain is radiating anywhere?
+Patient: No.
+Doctor: OK. And is there anything else that makes the pain worse, besides laying down?
+Patient: Not that I've noticed, no.
+Doctor: OK. So not like taking a deep breath, or anything like that?
+Patient: Maybe taking a deep breath, yeah.
+Doctor: OK. And when the pain started, could you tell me, could you think of anything that you were doing at the time?
+Patient: I mean, I was moving some furniture around, but I've done that before.
+Doctor: OK. So you didn't feel like you hurt yourself when you were doing that?
+Patient: No.
+Doctor: OK. And in regards to how severe the pain is, on a scale of 1 to 10, being the worst pain you've ever felt, how severe would you say the pain is?
+Patient: I'd say it's like a 7 or 8. It's pretty bad.
+Doctor: OK. And with the pain, do you have any other associated symptoms?
+Patient: I feel a little lightheaded, and I'm having some trouble breathing.
+Doctor: OK. Have you had any loss of consciousness?
+Patient: No.
+Doctor: OK. Have you been experiencing any racing of the heart?
+Patient: A little bit, yeah.
+Doctor: OK. Yeah. And have you been sweaty at all?
+Patient: Just from having issues breathing.
+Doctor: OK. Have you been having issues breathing since the pain started?
+Patient: Yes.
+Doctor: OK. And recently, have you had any periods of time where you have been immobilized or you haven't been able to move around a lot?
+Patient: No. No.
+Doctor: OK. And have you been feeling sick at all? Any infectious symptoms?
+Patient: No.
+Doctor: OK. Have you had any nausea or vomiting?
+Patient: No.
+Doctor: Any fevers or chills?
+Patient: No.
+Doctor: OK. How about any abdominal pain?
+Patient: No.
+Doctor: Any urinary problems?
+Patient: No.
+Doctor: Or bowel problems?
+Patient: OK.
+Doctor: Have you had a cough?
+Patient: No.
+Doctor: OK. You haven't brought up any blood?
+Patient: No.
+Doctor: With a cough?
+Patient: OK.
+Doctor: Have you had a wheeze with your difficulty breathing?
+Patient: No, not that I've heard.
+Doctor: OK. Any changes to the breath sounds at all? Like any noisy breathing?
+Patient: No. Well, I guess when I'm really having trouble breathing, yeah.
+Doctor: OK. Has anything like this ever happened to you before?
+Patient: No. No.
+Doctor: OK. And have you had any night sweats?
+Patient: No.
+Doctor: All right. And then how about any rashes or skin changes?
+Patient: No rashes, but I guess like my neck seems to be a little swollen.
+Doctor: OK. Do you have any neck pain?
+Patient: No.
+Doctor: OK. Have you had any accidents, like a car accident or anything where you really jerked your neck?
+Patient: No.
+Doctor: OK. Any trauma at all to the chest or back?
+Patient: No. No.
+Doctor: OK. So just in regards to past medical history, do you have any prior medical conditions?
+Patient: No.
+Doctor: OK. Any recent hospitalizations?
+Patient: No.
+Doctor: OK. Any prior surgeries?
+Patient: No.
+Doctor: OK. Do you take any medications regularly, are they prescribed or over the counter?
+Patient: No.
+Doctor: All right. How about any allergies to medications?
+Patient: None.
+Doctor: All right. Any immunizations or are they up to date?
+Patient: They're all up to date.
+Doctor: Excellent. All right. And could you tell me a little bit about your living situation currently?
+Patient: Sure. I live in an apartment by myself. Yep, that's about it.
+Doctor: OK. And how do you support yourself financially?
+Patient: I'm an accountant.
+Doctor: OK. Sounds like a pretty stressful job, or that it can be. Do you smoke cigarettes?
+Patient: I do.
+Doctor: OK. And how much do you smoke?
+Patient: I smoke about a pack a day.
+Doctor: OK. How long have you been smoking for?
+Patient: For the past 10 to 15 years.
+Doctor: OK. And do you smoke cannabis?
+Patient: Sometimes.
+Doctor: How much marijuana would you smoke per week?
+Patient: Per week? Maybe about five milligrams, not that much.
+Doctor: OK. And do you use any other recreational drugs, like cocaine, crystal meth, opioids?
+Patient: No.
+Doctor: OK. Have you used IV drugs before?
+Patient: No.
+Doctor: OK. And do you drink alcohol?
+Patient: I do.
+Doctor: OK. How much alcohol do you drink each week?
+Patient: I'd say I have like one or two drinks a day, so about 10 drinks a week.
+Doctor: OK. And then briefly, could you tell me a little bit about your diet and exercise?
+Patient: Sure. I try to eat healthy for dinner at least, but most of my lunches are I'd eat out. And then in terms of exercise, I try to exercise every other day. I run for about half an hour.
+Doctor: OK. Oh, that's great that you've been working on the activity and the diets as well. So has anything like this happened in your family before?
+Patient: No.
+Doctor: OK. Has anybody in the family had a heart attack before?
+Patient: Actually, yes. My father had a heart attack when he was 45.
+Doctor: OK. And anybody in the family have cholesterol problems?
+Patient: I think my father did.
+Doctor: I see. OK. And how about anybody in the family have a stroke?
+Patient: No strokes.
+Doctor: OK. And then any cancers in the family?
+Patient: No.
+Doctor: OK. Was there anything else that you wanted to tell me about today that on history?
+Patient: No, I don't think so. I think you asked me everything.

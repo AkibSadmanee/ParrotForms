@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Information and Medical History Form</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./static/css/style.css" rel="stylesheet">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="jumbotron heading text-center exo-2-regular heading">
+    <h1>Patient Medical Form</h1>
+</div>
+<div class="container alegreya-sans-regular">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="personal" aria-selected="true">Personal Information</a>
+    </li>
+    <li class="nav-item">
+
+        <a class="nav-link tab-pane" id="lifestyle-tab" data-toggle="tab" href="#lifestyle" role="tab" aria-controls="lifestyle" aria-selected="false">Lifestyle</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link tab-pane" id="medical-history-tab" data-toggle="tab" href="#medical-history" role="tab" aria-controls="medical-history" aria-selected="false">Medical History</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link tab-pane" id="current-issue-tab" data-toggle="tab" href="#current-issue" role="tab" aria-controls="current-issue" aria-selected="false">Current Visit</a>
+    </li>
+  </ul>
+  
+  <form id="mainForm" class="tab-content" method="POST" action="/submit">
+    <div class="tab-pane fade show active" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" id="Name" name="Name" placeholder="Name">
+        </div>
+        <div class="form-group mt-3">
+          <input type="number" class="form-control" id="Age" name="Age" min="0" placeholder="Age (Years)">
+        </div>
+        <div class="form-group mt-3">
+          <select class="form-control" id="Gender" name="Gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" id="Address" name="Address" placeholder="Address"></textarea>
+        </div>
+        <div class="form-group mt-3">
+          <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
+        </div>
+        <div class="form-group mt-3">
+          <input type="email" class="form-control" id="Email" name="Email" placeholder="Email">
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" id="Occupation" name="Occupation" placeholder="Occupation">
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" id="InsuranceCompany" name="InsuranceCompany" placeholder="Insurance Company">
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" id="InsurancePolicyNumber" name="InsurancePolicyNumber" placeholder="Insurance Policy Number">
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" id="PrimaryCarePhysician" name="PrimaryCarePhysician" placeholder="Primary Care Physician">
+        </div>
+      </div>
+      
+      
+
+      <div class="tab-pane fade" id="lifestyle" role="tabpanel" aria-labelledby="lifestyle-tab">
+        <div class="center-content">
+          <div class="form-group mt-5" id="SmokingHistory">
+            <label for="smoking"><strong>Smoking History:</strong></label><br>
+            <div class="radio-group">
+              <input type="radio" id="SmokingHistory_yes" name="smoking" value="Yes" onchange="toggleInputField('SmokingHistory', true)">
+              <label for="smoking_yes">Yes</label>
+              <input type="radio" id="SmokingHistory_no" name="smoking" value="No" onchange="toggleInputField('SmokingHistory', false)">
+              <label for="smoking_no">No</label>
+            </div>
+            <div id="SmokingHistory_input_container"></div>
+          </div>
+      
+          <div class="form-group mt-5" id="AlcoholHistory">
+            <label for="alcohol"><strong>Alcohol History:</strong></label><br>
+            <div class="radio-group">
+              <input type="radio" id="AlcoholHistory_yes" name="alcohol" value="Yes" onchange="toggleInputField('AlcoholHistory', true)">
+              <label for="alcohol_yes">Yes</label>
+              <input type="radio" id="AlcoholHistory_no" name="alcohol" value="No" onchange="toggleInputField('AlcoholHistory', false)">
+              <label for="alcohol_no">No</label>
+            </div>
+            <div id="AlcoholHistory_input_container"></div>
+          </div>
+      
+          <div class="form-group mt-5" id="DrugHistory">
+            <label for="drug"><strong>Drug History:</strong></label><br>
+            <div class="radio-group">
+              <input type="radio" id="DrugHistory_yes" name="drug" value="Yes" onchange="toggleInputField('DrugHistory', true)">
+              <label for="drug_yes">Yes</label>
+              <input type="radio" id="DrugHistory_no" name="drug" value="No" onchange="toggleInputField('DrugHistory', false)">
+              <label for="drug_no">No</label>
+            </div>
+            <div id="DrugHistory_input_container"></div>
+          </div>
+      
+          <div class="form-group mt-5" id="HazardousOccupation">
+            <label for="occupation"><strong>Hazardous Occupation:</strong></label><br>
+            <div class="radio-group">
+              <input type="radio" id="HazardousOccupation_yes" name="occupation" value="Yes" onchange="toggleInputField('HazardousOccupation', true)">
+              <label for="occupation_yes">Yes</label>
+              <input type="radio" id="HazardousOccupation_no" name="occupation" value="No" onchange="toggleInputField('HazardousOccupation', false)">
+              <label for="occupation_no">No</label>
+            </div>
+            <div id="HazardousOccupation_input_container"></div>
+          </div>
+      
+          <div class="form-group mt-5" id="SexualActivity">
+            <label for="sex"><strong>Sexual Activity:</strong></label><br>
+            <div class="radio-group">
+              <input type="radio" id="SexualActivity_yes" name="sex" value="Yes" onchange="toggleInputField('SexualActivity', true)">
+              <label for="sex_yes">Yes</label>
+              <input type="radio" id="SexualActivity_no" name="sex" value="No" onchange="toggleInputField('SexualActivity', false)">
+              <label for="sex_no">No</label>
+            </div>
+            <div id="SexualActivity_input_container"></div>
+          </div>
+      
+          <div class="form-group mt-5" id="DietaryRestriction">
+            <label for="diet"><strong>Dietary Restriction:</strong></label><br>
+            <div class="radio-group">
+              <input type="radio" id="DietaryRestriction_yes" name="diet" value="Yes" onchange="toggleInputField('DietaryRestriction', true)">
+              <label for="diet_yes">Yes</label>
+              <input type="radio" id="DietaryRestriction_no" name="diet" value="No" onchange="toggleInputField('DietaryRestriction', false)">
+              <label for="diet_no">No</label>
+            </div>
+            <div id="DietaryRestriction_input_container"></div>
+          </div>
+        </div>
+      </div>
+      
+      
+    <div class="tab-pane fade" id="medical-history" role="tabpanel" aria-labelledby="medical-history-tab">
+        <div class="form-group mt-3">
+            <label for="allergies"><strong>Allergies:</strong></label>
+            <div id="allergy-fields">
+                <div class="form-row align-items-center mb-2">
+                    <div class="col-8">
+                        <input type="text" class="form-control Allergies-text" name="allergies[]" placeholder="Enter an allergy">
+                    </div>
+                    <div class="col-3">
+                        <select class="form-control Allergies-select" name="allergy-type[]">
+                        <option value="food">Food</option>
+                        <option value="drug">Drug</option>
+                        <option value="environmental">Environmental</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <button type="button" id="Allergies-add" class="btn btn-block add-btn" onclick="addAllergyField()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+        <div class="form-group mt-3" id="Medications">
+            <label for="medications"><strong>Current Medications:</strong></label>
+            <div id="medication-fields">
+                <div class="form-row align-items-center mb-2">
+                    <div class="col-11">
+                        <input type="text" class="form-control Medications" name="medications[]" placeholder="Enter a medication">
+                    </div>
+                    <div class="col-1">
+                        <button type="button" id="Medications-add" class="btn btn-block add-btn" onclick="addMedicationField()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-group mt-3" id="PreviousHospitalizations">
+            <label for="hospitalizations"><strong>Previous Hospitalizations:</strong></label>
+            <div id="hospitalization-fields">
+                <div class="form-row align-items-center mb-2">
+                    <div class="col-11">
+                        <input type="text" class="form-control PreviousHospitalizations" name="hospitalizations[]" placeholder="Enter a hospitalization">
+                    </div>
+                    <div class="col-1">
+                        <button type="button" id="PreviousHospitalizations-add" class="btn btn-block add-btn" onclick="addHospitalizationField()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mt-3" id="MentalHealthHistory">
+            <label for="mental"><strong>Mental Health History:</strong></label>
+            <div id="mental-fields">
+                <div class="form-row align-items-center mb-2">
+                    <div class="col-11">
+                        <input type="text" class="form-control MentalHealthHistory" name="mentals[]" placeholder="Enter a mental health condition">
+                    </div>
+                    <div class="col-1">
+                        <button type="button" id="MentalHealthHistory-add" class="btn btn-block add-btn" onclick="addMentalField()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mt-3" id="FamilyMedicalHistory">
+            <label for="family"><strong>Family medical history:</strong></label>
+            <div id="family-fields">
+                <div class="form-row align-items-center mb-2">
+                    <div class="col-11">
+                        <input type="text" class="form-control FamilyMedicalHistory" name="family[]" placeholder="Enter any significant medical condition among close family members">
+                    </div>
+                    <div class="col-1">
+                        <button type="button" id="FamilyMedicalHistory-add" class="btn btn-block add-btn" onclick="addFamilyField()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="current-issue" role="tabpanel" aria-labelledby="current-issue-tab">
+        <div class="form-group mt-3">
+            <label for="ReasonForVisit"><strong>Reason for visit:</strong></label>
+            <input type="text" class="form-control" id="ReasonForVisit" name="ReasonForVisit">
+        </div>
+
+        <div class="form-group mt-3" id="CurrentSymptoms">
+            <label for="symptom"><strong>Current Symptoms:</strong></label>
+            <div id="symptom-fields">
+                <div class="input-group form-row mb-2">
+                    <input type="text" class="form-control CurrentSymptoms" name="symptoms[]" placeholder="Enter Symptom">
+                    <div class="input-group-append">
+                        <button type="button" id="CurrentSymptoms-add" class="btn add-btn" onclick="addSymptomField()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="comment"><strong>Additional Comments (Optional):</strong></label>
+            <textarea type="text" class="form-control" id="AdditionalComments" name="AdditionalComments"></textarea>
+        </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./static/js/script.js"></script>
+
+</body>
+<footer class="mb-5"></footer>
+</html>

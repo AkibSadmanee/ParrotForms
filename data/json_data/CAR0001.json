@@ -1,0 +1,37 @@
+{
+    "Name": null,
+    "Age": 39,
+    "Gender": "male",
+    "Address": null,
+    "PhoneNumber": null,
+    "Email": null,
+    "Occupation": "accountant",
+    "InsuranceCompany": null,
+    "InsurancePolicyNumber": null,
+    "PrimaryCarePhysician": null,
+    "SmokingHistory": [true, "smokes a pack a day for the past 10 to 15 years"],
+    "AlcoholHistory": [true, "drinks one or two drinks a day, about 10 drinks a week"],
+    "DrugHistory": [true, "occasionally smokes cannabis, about five milligrams per week"],
+    "HazardousOccupation": [false, null],
+    "SexualActivity": [null, null],
+    "DietaryRestriction": [false, "tries to eat healthy for dinner, eats out for lunch"],
+    "Allergies": [],
+    "Medications": [],
+    "PreviousHospitalizations": [],
+    "MentalHealthHistory": [],
+    "FamilyMedicalHistory": [
+      "Father had a heart attack at 45",
+      "Father had cholesterol problems"
+    ],
+    "ReasonForVisit": "chest pain",
+    "CurrentSymptoms": [
+      "sharp chest pain on the left side",
+      "lightheadedness",
+      "trouble breathing",
+      "racing heart",
+      "sweating",
+      "neck seems a little swollen"
+    ],
+    "AdditionalComments": null
+  }
+  

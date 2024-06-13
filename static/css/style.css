@@ -1,0 +1,151 @@
+*{
+  --hunter-green: #415d50;
+  --mint-cream: #ebf5ee;
+  --dark: #444c47;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+  background-color: var(--hunter-green); /* Background color */
+  color: var(--dark);
+}
+
+.alegreya-sans-regular {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.exo-2-regular {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+.heading {
+  background-image: url('../images/jungle-overlay.png'); /* Path to your background image */
+  background-size: cover; /* Make sure the image covers the entire area */
+  background-position: center; /* Center the image */
+  color: var(--mint-cream); /* Text color to contrast with the background image */
+  padding: 60px 20px; /* Add padding to give space around the title */
+  box-shadow: 2px 2px 4px 7px rgba(0, 0, 0, 0.4); /* Jumbotron box shadow */
+}
+
+
+
+.container {
+  max-width: 70%;
+  color: var(--dark);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--mint-cream); /* Container background color */
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 5px rgba(0, 0, 0, 0.4); /* Jumbotron box shadow */  
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+.tab-pane {
+  min-height: 100%; /* Adjust the height as needed */
+}
+
+.nav-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--mint-cream); /* Active tab background color */
+  color: var(--dark); /* Active tab text color */
+  border-color: var(--dark);
+}
+
+.nav-tabs .nav-item {
+  flex: 1;
+}
+
+.nav-tabs .nav-link {
+  text-align: center;
+  color: var(--dark); /* Inactive tab text color */
+  width: 100%;
+  border-color: white;
+  border-width: 2px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: rgba(var(--mint-cream), 0.7); /* Primary button background color */
+  border-color: var(--mint-cream); /* Primary button border color */
+}
+
+.btn-primary:hover {
+  background-color: var(--mint-cream); /* Primary button hover background color */
+  border-color: var(--mint-cream); /* Primary button hover border color */
+}
+
+#submit-btn {
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  background-color: var(--dark);
+}
+#submit-btn:hover{
+  color: black;
+}
+
+
+.add-btn {
+  padding: 0.375rem 0.75rem;
+  background-color: var(--hunter-green); /* Button background color */
+  border-color: var(--dark);  
+  width: auto;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  color: var(--mint-cream);
+}
+
+.rmv-btn {
+  padding: 0.375rem 0.75rem;
+  background-color: #934040;
+  border-color: #4c4444;
+  width: auto;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  color: var(--mint-cream);
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-content .form-group {
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* Adjust the gap as needed */
+  accent-color: var(--hunter-green);
+  margin-bottom: 7px;
+}
+
+.radio-group label {
+  margin: 0 10px; /* Add margin between radio buttons and labels */
+}

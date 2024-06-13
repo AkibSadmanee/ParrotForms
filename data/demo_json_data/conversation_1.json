@@ -1,0 +1,30 @@
+{
+    "Name": "Sarah Collins",
+    "Age": 32,
+    "Gender": "female",
+    "Address": "456 Oak Avenue, River City",
+    "PhoneNumber": "555-6789",
+    "Email": "sarahc@example.com",
+    "Occupation": "graphic designer",
+    "InsuranceCompany": "UnitedHealth",
+    "InsurancePolicyNumber": "UH654321",
+    "PrimaryCarePhysician": "Dr. Emily Parker",
+    "SmokingHistory": [false, null],
+    "AlcoholHistory": [true, "Occasionally, I have a glass of wine on weekends"],
+    "DrugHistory": [false, null],
+    "HazardousOccupation": [false, null],
+    "SexualActivity": [true, null],
+    "DietaryRestriction": [true, "lactose intolerant"],
+    "Allergies": [
+      {"name": "shellfish", "type": "Food"},
+      {"name": "pollen", "type": "Environment"}
+    ],
+    "Medications": ["daily antihistamine for pollen allergy"],
+    "PreviousHospitalizations": ["hospitalized for an appendectomy three years ago"],
+    "MentalHealthHistory": ["postpartum depression after first child"],
+    "FamilyMedicalHistory": ["mother had breast cancer", "father has high blood pressure"],
+    "ReasonForVisit": "I've been feeling quite dizzy and fatigued lately.",
+    "CurrentSymptoms": ["dizzy", "very tired", "hard to concentrate at work"],
+    "AdditionalComments": "I just want to find out what's causing this."
+  }
+  

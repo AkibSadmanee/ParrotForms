@@ -1,0 +1,86 @@
+{
+  "Name": { "type": "string" },
+  "Age": { "type": "number" },
+  "Gender": { "type": "string", "enum": ["male", "female", "other"] },
+  "Address": { "type": "string" },
+  "PhoneNumber": { "type": "string" },
+  "Email": { "type": "string" },
+  "Occupation": { "type": "string" },
+  "InsuranceCompany": { "type": "string" },
+  "InsurancePolicyNumber": { "type": "string" },
+  "PrimaryCarePhysician": { "type": "string" },
+  "SmokingHistory": {
+    "type": "array",
+    "items": [
+      { "type": "boolean" },
+      { "type": "string" }
+    ]
+  },
+  "AlcoholHistory": {
+    "type": "array",
+    "items": [
+      { "type": "boolean" },
+      { "type": "string" }
+    ]
+  },
+  "DrugHistory": {
+    "type": "array",
+    "items": [
+      { "type": "boolean" },
+      { "type": "string" }
+    ]
+  },
+  "HazardousOccupation": {
+    "type": "array",
+    "items": [
+      { "type": "boolean" },
+      { "type": "string" }
+    ]
+  },
+  "SexualActivity": {
+    "type": "array",
+    "items": [
+      { "type": "boolean" },
+      { "type": "string" }
+    ]
+  },
+  "DietaryRestriction": {
+    "type": "array",
+    "items": [
+      { "type": "boolean" },
+      { "type": "string" }
+    ]
+  },
+  "Allergies": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string", "enum": ["Food", "Medicine", "Environment"] }
+      }
+    }
+  },
+  "Medications": {
+    "type": "array",
+    "items": { "type": "string" }
+  },
+  "PreviousHospitalizations": {
+    "type": "array",
+    "items": { "type": "string" }
+  },
+  "MentalHealthHistory": {
+    "type": "array",
+    "items": { "type": "string" }
+  },
+  "FamilyMedicalHistory": {
+    "type": "array",
+    "items": { "type": "string" }
+  },
+  "ReasonForVisit": { "type": "string" },
+  "CurrentSymptoms": {
+    "type": "array",
+    "items": { "type": "string" }
+  },
+  "AdditionalComments": { "type": "string" }
+}

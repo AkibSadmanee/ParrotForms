@@ -1,0 +1,29 @@
+{
+    "Name": "John Doe",
+    "Age": 45,
+    "Gender": "male",
+    "Address": "123 Maple Street, Springfield",
+    "PhoneNumber": "555-1234",
+    "Email": "johndoe@example.com",
+    "Occupation": "electrician",
+    "InsuranceCompany": "Blue Cross",
+    "InsurancePolicyNumber": "BC123456",
+    "PrimaryCarePhysician": "Dr. Laura Brown",
+    "SmokingHistory": [true, "quit five years ago"],
+    "AlcoholHistory": [true, "socially, maybe once or twice a month"],
+    "DrugHistory": [false, "No history of recreational drug use"],
+    "HazardousOccupation": [true, "sometimes work in risky situations as an electrician"],
+    "SexualActivity": [true, "sexually active"],
+    "DietaryRestriction": [false, "No dietary restrictions"],
+    "Allergies": [
+      { "name": "penicillin", "type": "Medicine" },
+      { "name": "dust mites", "type": "Environment" }
+    ],
+    "Medications": ["multivitamin", "ibuprofen for headaches"],
+    "PreviousHospitalizations": ["knee surgery two years ago"],
+    "MentalHealthHistory": ["dealt with anxiety in the past"],
+    "FamilyMedicalHistory": ["father had heart disease", "mother has diabetes"],
+    "ReasonForVisit": "persistent cough and a bit of a fever for the past week",
+    "CurrentSymptoms": ["persistent cough", "fever"],
+    "AdditionalComments": "hoping to get this cough sorted out"
+  }  

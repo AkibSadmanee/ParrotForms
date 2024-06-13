@@ -1,0 +1,82 @@
+Patient: Hey, doc, I'm a 45-year-old man coming in. I'm worried there's a little rash on my leg. I'm getting nervous about it.
+Doctor: Hi. I understand you have a rash on your leg.
+Patient: I don't really know what I would call it. That's what I told the nurse when I came in, but it's more hurts than anything.
+Doctor: Okay. How long has this been going on for?
+Patient: It's been looking weird for about a week, but only, yes, it started hurting yesterday. It started looking strange and I just wanted to come in to get it checked out.
+Doctor: Okay. When you say it's looking strange, can you tell me what you mean by that?
+Patient: Swollen. It looks bigger than it did before. Meaner, if that makes sense.
+Doctor: Swollen. Okay. Is it red?
+Patient: Yeah, it's red. It's turning more red in the area around it. I've got these scabs. I've got diabetes. I'm not exactly the best with it. I'm scratching at it and normally it's not that bad, but this is just strange looking. There's no other word for it.
+Doctor: Okay. Have you ever had anything like this before?
+Patient: No. No. Nothing. Well, I have occasional ulcers and sometimes I bang my toe when I'm not exactly the best taking care of my feet, but this is the first time I've gotten something that I've just never seen it before.
+Doctor: Okay. Do you have any ulcers right now on your feet?
+Patient: I think so. One of the last times I saw the family doc, I think I've got an ulcer on my left heel, but I think it's doing all right.
+Doctor: Okay. What leg are you having this problem with right now?
+Patient: It's on my right. It's on my ankle.
+Doctor: Okay. How have your sugars been controlled recently?
+Patient: I stopped measuring them. Yeah. Last time I measured it was pretty bad. I think my A1C last time was like nine something. I'm trying better to be with it. It's just hard with work.
+Doctor: For sure. I can imagine. In general, even if you don't know your numbers for your sugars, have you felt worse than usual lately? Have you felt rundown at all?
+Patient: Yeah. Actually, I have. Being more. I feel hungry sometimes. I'm tired, but I don't know. It's hard to tell. There's an awful lot going on in my life right now with the kids, but it's hard to tell. I think, yeah, I need to see my family doc.
+Doctor: Okay. Definitely a good idea moving forward just to make sure you get on top of these things, but I'm glad you came in today so we can have a better look at you and make sure that there's nothing super concerning going on. In addition to this, have you had any other new symptoms?
+Patient: Symptoms? I feel a little hot actually. When the swelling started, it also started leaking this white stuff from one of the, one of what used to be a scab. It's now like an open wound now.
+Doctor: Okay. Okay. So when did you start feeling hot?
+Patient: Honestly, last 12 hours.
+Doctor: Okay. Can you take your temperature at all?
+Patient: No. I don't have a thermometer at home.
+Doctor: Okay. Have you had any difficulty breathing?
+Patient: No.
+Doctor: Any chest pain?
+Patient: No.
+Doctor: Okay. Have you noticed that your right leg feels any hotter than the left?
+Patient: Yeah. Yeah, it does actually. Changing socks the other day.
+Doctor: Okay. Have you felt ill recently? Have you been sick at all?
+Patient: Hmm. Aside from just feeling overall crummy the last couple of weeks? No. Don't really. Less energy today, but I was up last night thinking about this. Yeah. I wanted to come in and talk.
+Doctor: Okay. Yeah. You did the right thing. I'm glad that you're in today. Is the pain on your leg worse when you touch it?
+Patient: Yeah. Maybe not so much when I touch it, when I walk with it and I start flexing it. It doesn't like that.
+Doctor: Okay. Okay. Just resting it right now. It feels fine.
+Patient: It's okay.
+Doctor: Okay. Well, if I think of any more questions specifically about your leg, I will go back to it, but I'm going to just move on and ask you a few questions about your overall health. You've already shared with me that you are diabetic. Do you have any other chronic conditions that you live with?
+Patient: Chronic conditions. I see the family doc about cholesterol. I'm on a pill for that. I had asthma as a kid. It hasn't been an issue now. And my back, I've had back pain for the last 10 years, but I don't really take anything for it, just Tylenol or Advil for that.
+Doctor: Okay. Oh, my other question about your leg was, have you lost any feeling in it?
+Patient: It's like a dull ache sometimes when I touch it, but no. Like in the area, the ankle, no, but definitely on my feet. Like over the years, I've noticed I feel less on it compared to what I did previously.
+Doctor: Okay. So we talked about your diabetes. You said you have high cholesterol. So what medications are you currently taking?
+Patient: I'm taking four pills right now. One of them is for the cholesterol. I think it's called Rosuvastatin. The other three, they're all diabetes medications, but I don't remember. Metformin is one of them. Sitagliptin. I have a list somewhere. I'll give it to you later.
+Doctor: Okay. Are you on insulin right now?
+Patient: No.
+Doctor: Are you on any new medications new to you recently?
+Patient: No, no, I've had them for about a year now.
+Doctor: Do you have any allergies?
+Patient: Yeah, I do actually. Penicillin, I can't take that.
+Doctor: And what happens when you take penicillin?
+Patient: It's been a while. As a kid, apparently, my face got bloated. Just had a hard time breathing.
+Doctor: Okay. Well, we'll make sure that we don't give you that. Can you tell me if you've had any previous surgery?
+Patient: Yeah.
+Doctor: What was it?
+Patient: I had my sinuses. I had some pretty bad sinusitis when I was in my teens, and they went in and kind of carved a little bit of space out.
+Doctor: Okay. Is that the only surgery that you've had?
+Patient: Yep.
+Doctor: And can you tell me, do you have any family history of diabetes, skin problems, anything else that stands out to you?
+Patient: Yep. On my mom's side of the family, pretty much everyone has diabetes, high blood pressure, cholesterol. Dad's side of the family is pretty healthy. I think maybe one of my aunts had lung cancer, but she's a pretty big smoker too.
+Doctor: Okay. And I'm just going to ask you a few questions about your lifestyle. So you said that you have children?
+Patient: Yeah, I do.
+Doctor: Do you live in town? Do you live with your kids?
+Patient: I live in town. I see my kids every two weeks.
+Doctor: And what do you do for work? Did I already ask you this?
+Patient: No, I'm currently unemployed. I'm looking for work, partially employed, I suppose you should say. I run my own business.
+Doctor: I see. And what do you do when you are working ideally?
+Patient: Oh, when I am working, I'm an accountant.
+Doctor: Okay. And do you smoke?
+Patient: Yeah, once in a while. I'm stressed, so.
+Doctor: How much do you smoke on average?
+Patient: The last couple of weeks I've been smoking more. Maybe like two packs a week.
+Doctor: Okay. Do you drink alcohol?
+Patient: Yeah.
+Doctor: How much do you typically drink?
+Patient: An average week, maybe a two-four.
+Doctor: So maybe like three per day or something like that, if you were to average it out?
+Patient: Yeah, if you average it out. I mainly go through the two-four on a weekend, to be honest.
+Doctor: Oh, I see. Okay. More so on the weekend, so maybe a little bit more than three per day on those days. Okay. I always fix that, that's everything that I need to ask you for now. I'd like to get a closer look at this leg. Did you have any other questions or concerns before we move forward to the physical exam?
+Patient: No, I just want to get this figured out.
+Doctor: Okay. Yeah, we'll definitely do that for you. So, yeah, I'm going to have a look at it and then after that, I will go talk to the doctor that I'm working with and we'll see what we can do for you. Does that sound good?
+Patient: Thank you, doc. Yeah, sounds great.
+Doctor: Awesome. Okay. Thanks.

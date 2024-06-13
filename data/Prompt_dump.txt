@@ -1,0 +1,89 @@
+Generate Conversation
+------------------------------------------------------
+Generate an initial conversation between a doctor and a patient where the doctor indirectly inquires about the following information from the patient and the patient answers them all. The doctor does not need to ask about the following information sequentially. The order can be randomized, but it should contain all of the information.
+
+
+Name: String
+Age: Number
+Gender: choice of (male, female, other)
+Address: String
+Phone Number: String
+Email: String
+Occupation: String
+Insurance Company: String
+Insurance Policy Number: String
+Primary Care Physician: String
+
+Smoking History: [Bool, String]
+Alcohol History: [Bool, String]
+Drug History: [Bool, String]
+Hazardous Occupation: [Bool, String]
+Sexual Activity: [Bool, String]
+Dietary Restriction: [Bool, String]
+
+Allergies: [String, choice of (food, medicine, environment)]
+Medications: List of strings
+Previous Hospitalizations: List of strings
+Mental Health History: List of strings
+Family Medical History: List of strings
+
+Reason for Visit: String
+Current Symptoms: List of strings
+Additional Comments: String
+
+
+
+Generate Json schema
+------------------------------------------------------
+Generate a JSON schema from the following information. Do not miss a single line. 
+
+
+Name: String
+Age: Number
+Gender: String
+Address: String
+Phone Number: String
+Email: String
+Occupation: String
+Insurance Company: String
+Insurance Policy Number: String
+Primary Care Physician: String
+
+Smoking History: [Bool, String]
+Alcohol History: [Bool, String]
+Drug History: [Bool, String]
+Hazardous Occupation: [Bool, String]
+Sexual Activity: [Bool, String]
+Dietary Restriction: [Bool, String]
+
+Allergies: [String, choice of (food, medicine, environment)]
+Medications: List of strings
+Previous Hospitalizations: List of strings
+Mental Health History: List of strings
+Family Medical History: List of strings
+
+Reason for Visit: String
+Current Symptoms: List of strings
+Additional Comments: String
+
+
+
+Extract topics and subtopics from HTML form
+------------------------------------------------------
+Extract all the topics and subtopics from the following HTML form. 
+
+<form></form>
+
+
+
+
+Generate Conversation from transcription
+------------------------------------------------------
+The following is a blob of text transcribed with whisper. The text represents a conversation between a doctor and a patient. Create a dialogue between a doctor and a patient from the text. Only assign the speaker to certain sentences. Do not create a new sentence or change any. 
+
+Input Text
+----------
+<Input Text>
+
+Dialouge
+----------

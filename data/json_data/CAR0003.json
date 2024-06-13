@@ -1,0 +1,27 @@
+{
+    "Name": null,
+    "Age": null,
+    "Gender": null,
+    "Address": null,
+    "PhoneNumber": null,
+    "Email": null,
+    "Occupation": "cashier",
+    "InsuranceCompany": null,
+    "InsurancePolicyNumber": null,
+    "PrimaryCarePhysician": null,
+    "SmokingHistory": [true, "Used to smoke 10 a day for 40 years"],
+    "AlcoholHistory": [false, null],
+    "DrugHistory": [false, null],
+    "HazardousOccupation": [false, null],
+    "SexualActivity": [null, null],
+    "DietaryRestriction": [true, "Trying to eat healthier but not always balanced"],
+    "Allergies": [],
+    "Medications": ["aspirin", "Ramaprol", "Simastatin"],
+    "PreviousHospitalizations": ["Heart attack with stent procedure four years ago"],
+    "MentalHealthHistory": [],
+    "FamilyMedicalHistory": ["Father died of a heart attack at 60"],
+    "ReasonForVisit": "Feeling breathless",
+    "CurrentSymptoms": ["Breathlessness worse with exertion", "Cough with frothy sputum", "Swelling around legs", "Increased fatigue", "Breathlessness worse at night and lying down"],
+    "AdditionalComments": "Patient has a history of high blood pressure, diabetes, high cholesterol, and a previous heart attack"
+  }
+  
