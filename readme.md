@@ -1,8 +1,13 @@
 <p align="center">
   <img src="./static/images/parrotForms.png" alt="Parrot Forms Logo"  height="300px" width="300px"/>
+  <br>
+  <h2 align="center">Parrot Forms</h2>
+</p>
+<p align="center">
+  Technology for Enhanced Care!
 </p>
 
-# Parrot Forms
+
 
 ## Overview
 Imagine doctors having conversations with hundreds of different patients, generating a huge amount of unstructured data. Our idea is to use the power of modern AI to transform this unstructured data into a consistent and readable format like JSON and automate the process of filling the patient information forms.
