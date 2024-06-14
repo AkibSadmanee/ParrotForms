@@ -1,7 +1,7 @@
 <p align="center">
   <img src="./static/images/parrotForms.png" alt="Parrot Forms Logo"  height="300px" width="300px"/>
   <br>
-  <h2 align="center">Parrot Forms</h2>
+  <h1 align="center">Parrot Forms</h1>
 </p>
 <p align="center">
   Technology for Enhanced Care!
