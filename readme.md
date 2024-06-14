@@ -24,8 +24,8 @@ We use Flask to open a server, providing a platform for our automated system to 
 ### 4. Selenium for Form Automation
 Selenium is employed to automate the process of filling out the form on the website. This ensures that the data is entered swiftly and accurately, mimicking human input.
 
-### 5. Dynamic Dashboard
-Our advanced dashboard, powered by ChatGPT, dynamically updates with each patient visit JSON. It showcases metrics, patient details, and organizes upcoming appointments in list and calendar formats. It features a progress circle and allows for easy addition and deletion of appointments, ensuring up-to-date information automatically.
+<!-- ### 5. Dynamic Dashboard
+Our advanced dashboard, powered by ChatGPT, dynamically updates with each patient visit JSON. It showcases metrics, patient details, and organizes upcoming appointments in list and calendar formats. It features a progress circle and allows for easy addition and deletion of appointments, ensuring up-to-date information automatically. -->
 
 ## Folder Structure
 ```
