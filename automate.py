@@ -29,9 +29,10 @@ def load_page(file="file:///Users/akib/Codes/Hokulani24/demo_medical_hist.html")
 def fill_form(url="http://127.0.0.1:5000", data = None, tabs = None):
     driver = load_page(url)
 
-    sleep(1.5)
+    sleep(0.5)
 
     for tab_name, ids in tabs.items():
+        sleep(2)
         tab = driver.find_element(By.ID, tab_name)
         tab.click()
         sleep(0.5)
@@ -89,9 +90,11 @@ def fill_form(url="http://127.0.0.1:5000", data = None, tabs = None):
                 else:
                     input_field = driver.find_element(By.ID, id)
                     input_field.send_keys(data[id])
+    
+    while True:
+        pass
 
-
-    driver.find_element(By.ID, 'submit-btn').click()
+    # driver.find_element(By.ID, 'submit-btn').click()
 
 
 if __name__ == "__main__":
