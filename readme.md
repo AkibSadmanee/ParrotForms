@@ -1,5 +1,5 @@
-<p align="center" height="250px" width="250px">
-  <img src="./static/images/parrotForms.png" alt="Parrot Forms Logo" />
+<p align="center">
+  <img src="./static/images/parrotForms.png" alt="Parrot Forms Logo"  height="250px" width="250px"/>
 </p>
 
 # Parrot Forms
