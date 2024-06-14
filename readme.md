@@ -5,13 +5,11 @@
 # Parrot Forms
 
 ## Overview
--------
 Imagine doctors having conversations with hundreds of different patients, generating a huge amount of unstructured data. Our idea is to use the ChatGPT API to transform this unstructured data into a consistent and readable format like JSON. During our internship, we explored how ChatGPT can take these raw conversations and automatically format them into structured forms called JSON. This means that all the important information discussed between doctors and patients can be organized without the need for manual entry. This not only saves time but also ensures that data is accurate and easy to analyze.
 
 As a part of the <a href="https://cds.coe.hawaii.edu/hokulani/summer-2024-program/">Highscool Summer Internship program</a> of <a href="https://cds.coe.hawaii.edu/hokulani/">the Project Hokulani</a>, we present Parrot Forms - a tool to automate the process of filling patient information forms using the power of AI and large language models. It utilizes Whisper AI to take those live chats between doctors and patients and turn them into easy-to-understand dialogues for the computer to process the information. Our app then takes the generated dialogue and fills out the form.
 
 ## Key Components
--------
 ### 1. Whisper for Speech-to-Text Conversion
 The system uses Whisper to convert conversations between doctors and patients into a blob of text. This forms the basis of our automated data extraction process.
 
@@ -28,7 +26,6 @@ Selenium is employed to automate the process of filling out the form on the webs
 Our advanced dashboard, powered by ChatGPT, dynamically updates with each patient visit JSON. It showcases metrics, patient details, and organizes upcoming appointments in list and calendar formats. It features a progress circle and allows for easy addition and deletion of appointments, ensuring up-to-date information automatically. -->
 
 ## Folder Structure
--------
 ```
 PARROTFORMS/
 ├── data/
@@ -71,7 +68,6 @@ PARROTFORMS/
 ```
 
 ## Installation Instructions
--------
 1. **Clone the Repository**
    ```sh
    git clone https://github.com/yourusername/parrotforms.git
@@ -90,7 +86,6 @@ PARROTFORMS/
 
 
 ## Running Instructions
--------
 1. **Start the Flask Server**
    ```sh
    python app.py
