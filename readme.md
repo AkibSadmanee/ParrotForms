@@ -4,7 +4,7 @@
   <h1 align="center">Parrot Forms</h1>
 </p>
 <p align="center">
-  Technology for Enhanced Care!
+  Automatically Fill Forms, Save Time, Enhance Care.
 </p>
 
 
