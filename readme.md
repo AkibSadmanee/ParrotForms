@@ -30,6 +30,10 @@ Our advanced dashboard, powered by ChatGPT, dynamically updates with each patien
 PARROTFORMS/
 ├── data/
 │ ├── audio_data/
+│ │ ├── CAR0001.mp3
+│ │ ├── CAR0003.mp3
+│ │ ├── DER0001.mp3
+│ │ ├── ...
 │ ├── conversation/
 │ │ ├── CAR0001_conv.txt
 │ │ ├── CAR0003_conv.txt
