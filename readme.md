@@ -25,6 +25,10 @@ Selenium is employed to automate the process of filling out the form on the webs
 <!-- ### 5. Dynamic Dashboard
 Our advanced dashboard, powered by ChatGPT, dynamically updates with each patient visit JSON. It showcases metrics, patient details, and organizes upcoming appointments in list and calendar formats. It features a progress circle and allows for easy addition and deletion of appointments, ensuring up-to-date information automatically. -->
 
+<p align="center">
+  <img src="./static/images/screen.gif" alt="Parrot Forms in action"/>
+</p>
+
 ## Folder Structure
 ```
 PARROTFORMS/

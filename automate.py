@@ -14,7 +14,7 @@ def load_page(file="file:///Users/akib/Codes/Hokulani24/demo_medical_hist.html")
 
     # Set up the Chrome options
     options = webdriver.ChromeOptions()
-    options.add_argument("--start-maximized")  # Open the browser in maximized mode
+    # options.add_argument("--start-maximized")  # Open the browser in maximized mode
     options.add_argument("--disable-infobars")  # Disable the infobars
     options.add_argument("--disable-extensions")  # Disable extensions
 
