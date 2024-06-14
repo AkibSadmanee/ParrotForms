@@ -1,4 +1,4 @@
-<p align="center" height="50%" width="50%">
+<p align="center" height="250px" width="250px">
   <img src="./static/images/parrotForms.png" alt="Parrot Forms Logo" />
 </p>
 
