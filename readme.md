@@ -8,7 +8,7 @@
 
 Imagine doctors having conversations with hundreds of different patients, generating a huge amount of unstructured data. Our idea is to use the ChatGPT API to transform this unstructured data into a consistent and readable format like JSON. During our internship, we explored how ChatGPT can take these raw conversations and automatically format them into structured forms called JSON. This means that all the important information discussed between doctors and patients can be organized without the need for manual entry. This not only saves time but also ensures that data is accurate and easy to analyze.
 
-As a part of the <a href="https://cds.coe.hawaii.edu/hokulani/summer-2024-program/">Highscool Summer Internship</a> program of <a href="https://cds.coe.hawaii.edu/hokulani/">the Project Hokulani,</a> our project, Parrot Forms, utilizes Whisper AI to take those live chats between doctors and patients and turn them into easy-to-understand dialogues for the computer to process the information. Our app then takes the generated dialogue and fills out the form.
+As a part of the <a href="https://cds.coe.hawaii.edu/hokulani/summer-2024-program/">Highscool Summer Internship program</a> of <a href="https://cds.coe.hawaii.edu/hokulani/">the Project Hokulani,</a> we present Parrot Forms - a tool to automate the process of filling patient information forms. It utilizes Whisper AI to take those live chats between doctors and patients and turn them into easy-to-understand dialogues for the computer to process the information. Our app then takes the generated dialogue and fills out the form.
 
 ## Key Components
 
