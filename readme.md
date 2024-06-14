@@ -31,7 +31,7 @@ Our advanced dashboard, powered by ChatGPT, dynamically updates with each patien
 
 ## Folder Structure
 ```
-PARROTFORMS/
+ParrotForms/
 ├── data/
 │ ├── audio_data/
 │ │ ├── CAR0001.mp3
@@ -79,7 +79,7 @@ PARROTFORMS/
 1. **Clone the Repository**
    ```sh
    git clone https://github.com/yourusername/parrotforms.git
-   cd parrotforms
+   cd ParrotForms
    ```
 2. **Create a Virtual Environment**
    ```sh
