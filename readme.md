@@ -28,6 +28,7 @@ Selenium is employed to automate the process of filling out the form on the webs
 Our advanced dashboard, powered by ChatGPT, dynamically updates with each patient visit JSON. It showcases metrics, patient details, and organizes upcoming appointments in list and calendar formats. It features a progress circle and allows for easy addition and deletion of appointments, ensuring up-to-date information automatically.
 
 ## Folder Structure
+```
 PARROTFORMS/
 ├── data/
 │ ├── audio_data/
@@ -66,7 +67,7 @@ PARROTFORMS/
 ├── whisper.py
 ├── readme.md
 ├── requirements.txt
-
+```
 
 ## Installation Instructions
 1. **Clone the Repository**
