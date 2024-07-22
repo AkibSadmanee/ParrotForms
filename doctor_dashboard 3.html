@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.10.2/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@5.10.2/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@5.10.2/main.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 15px;
+            text-align: center;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #575d63;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .jumbotron {
+            background-color: #128865;
+            color: white;
+        }
+        .progress-container {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .progress-circle {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #dcdcdc;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            color: white;
+        }
+        .chart-container, .table-container, .patient-list-container, .patient-archive-container {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .table thead th {
+            border: none;
+        }
+        .table tbody td {
+            border: none;
+        }
+        .btn-primary {
+            background-color: #128865;
+            border-color: #128865;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        .nav-link.active {
+            background-color: #575d63;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        #calendar {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .patient-list-container ul, .patient-archive-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .patient-list-container li, .patient-archive-container li {
+            margin-bottom: 10px;
+        }
+        .patient-list-container a, .patient-archive-container a {
+            text-decoration: none;
+            color: #128865;
+        }
+        .patient-list-container a:hover, .patient-archive-container a:hover {
+            text-decoration: underline;
+        }
+        .day-progress-bar {
+            width: 100%;
+            height: 5px;
+            background-color: #dcdcdc;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .day-progress-bar::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            background-color: #128865;
+            width: 0;
+            transition: width 0.5s;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+        .edit-mode-actions {
+            display: none;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a href="#" class="nav-link" data-target="dashboard-section">Dashboard</a>
+    <a href="#" class="nav-link" data-target="appointments-section">Appointments</a>
+    <a href="#" class="nav-link" data-target="patients-section">My Patients</a>
+    <a href="#" class="nav-link" data-target="requests-section">Requests</a>
+    <a href="#" class="nav-link" data-target="messages-section">Messages</a>
+    <a href="#" class="nav-link" data-target="settings-section">Settings</a>
+    <a href="#" class="nav-link" data-target="logout-section">Logout</a>
+</div>
+
+<div class="main-content">
+    <div id="dashboard-section" class="section active">
+        <div class="jumbotron text-center">
+            <h1>Doctor Dashboard</h1>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="progress-container">
+                        <h3>Today's Patients</h3>
+                        <div class="progress-circle" id="progress-circle">
+                            75%
+                        </div>
+                        <div class="table-container mt-3">
+                            <h3>Upcoming Appointments</h3>
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Patient</th>
+                                        <th>Gender</th>
+                                        <th>Age</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="appointmentsDataBody">
+                                    <!-- Appointments data will be populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <div class="patient-list-container">
+                <h3>Patient List <button class="btn btn-primary" id="addPatientButton">Add Patient</button> <button class="btn btn-secondary" id="toggleEditModeButton">Edit Mode</button></h3>
+                <div class="edit-mode-actions" id="editModeActions">
+                    <button class="btn btn-danger" id="deleteSelectedButton">Delete Selected</button>
+                </div>
+                <ul id="patientList">
+                    <!-- Patient list will be populated here -->
+                </ul>
+            </div>
+
+            <div class="patient-archive-container">
+                <h3>Patient Archive</h3>
+                <ul id="patientArchive">
+                    <!-- Patient archive will be populated here -->
+                </ul>
+            </div>
+
+            <div class="calendar-container">
+                <h3>Calendar</h3>
+                <div class="day-progress-bar" id="day-progress-bar"></div>
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="appointments-section" class="section">
+        <div class="jumbotron text-center">
+            <h1>Appointments</h1>
+        </div>
+        <div class="container">
+            <div class="table-container">
+                <h3>Appointments List</h3>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Patient</th>
+                            <th>Gender</th>
+                            <th>Age</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="allAppointmentsDataBody">
+                        <!-- All appointments data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="patients-section" class="section">
+        <div class="jumbotron text-center">
+            <h1>My Patients</h1>
+        </div>
+        <div class="container">
+            <div class="table-container">
+                <h3>Patients List</h3>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Insurance Policy Number</th>
+                            <th>Phone Number</th>
+                            <th>Allergies</th>
+                            <th>Medications</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patientsListDataBody">
+                        <!-- Patients list data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="requests-section" class="section">
+        <div class="jumbotron text-center">
+            <h1>Requests</h1>
+        </div>
+        <div class="container">
+            <div class="table-container">
+                <h3>Requests List</h3>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Request</th>
+                            <th>Patient</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestsListDataBody">
+                        <!-- Requests list data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="messages-section" class="section">
+        <div class="jumbotron text-center">
+            <h1>Messages</h1>
+        </div>
+        <div class="container">
+            <div class="table-container">
+                <h3>Messages List</h3>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>From</th>
+                            <th>Message</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="messagesListDataBody">
+                        <!-- Messages list data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-section" class="section">
+        <div class="jumbotron text-center">
+            <h1>Settings</h1>
+        </div>
+        <div class="container">
+            <div class="settings-container">
+                <h3>Settings</h3>
+                <!-- Settings content will be here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="logout-section" class="section">
+        <div class="jumbotron text-center">
+            <h1>Logout</h1>
+        </div>
+        <div class="container">
+            <div class="logout-container">
+                <h3>Logout</h3>
+                <p>You have successfully logged out.</p>
+                <button class="btn btn-primary" onclick="window.location.href='login.html'">Login Again</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function switchSection(sectionId) {
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = e.target.getAttribute('data-target');
+            switchSection(targetSection);
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            e.target.classList.add('active');
+        });
+    });
+
+    function populateAppointmentsData(appointments) {
+        const appointmentsDataBody = document.getElementById('appointmentsDataBody');
+        appointmentsDataBody.innerHTML = '';
+
+        appointments.forEach(appointment => {
+            if (appointment.ID && appointment.Patient && appointment.Date && appointment.Time) {
+                const row = document.createElement('tr');
+
+                Object.keys(appointment).forEach(key => {
+                    const cell = document.createElement('td');
+                    if (key === 'Patient') {
+                        const link = document.createElement('a');
+                        link.href = `patient_info.html?patient=${appointment[key]}`;
+                        link.textContent = appointment[key];
+                        cell.appendChild(link);
+                    } else {
+                        cell.textContent = appointment[key];
+                    }
+                    row.appendChild(cell);
+                });
+
+                appointmentsDataBody.appendChild(row);
+            }
+        });
+
+        return appointments;
+    }
+
+    function createRevenueChart() {
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+                datasets: [
+                    {
+                        label: 'Revenue',
+                        data: [15000, 20000, 25000, 30000, 35000, 40000, 38000, 36000, 32000, 30000, 28000, 26000],
+                        borderColor: 'blue',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    }
+
+    function initializeCalendar(appointments) {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'timeGridWeek',
+            locale: 'en',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            editable: true,
+            selectable: true,
+            selectMirror: true,
+            select: function(arg) {
+                const title = prompt('Event Title:');
+                if (title) {
+                    calendar.addEvent({
+                        title: title,
+                        start: arg.start,
+                        end: arg.end,
+                        allDay: arg.allDay
+                    });
+                    saveAppointments(calendar.getEvents());
+                }
+                calendar.unselect();
+            },
+            eventClick: function(arg) {
+                if (confirm('Are you sure you want to delete this event?')) {
+                    arg.event.remove();
+                    saveAppointments(calendar.getEvents());
+                }
+            },
+            events: appointments.map(app => ({
+                title: app.Patient,
+                start: `${app.Date}T${app.Time}`,
+                url: `patient_info.html?patient=${app.Patient}`
+            }))
+        });
+        calendar.render();
+    }
+
+    function updateProgressCircle(patientsScheduled) {
+        const progressCircle = document.getElementById('progress-circle');
+        progressCircle.textContent = `${patientsScheduled}%`;
+        progressCircle.style.background = `conic-gradient(
+            #128865 0% ${patientsScheduled}%, 
+            #dcdcdc ${patientsScheduled}% 100%
+        )`;
+    }
+
+    function updateDayProgressBar() {
+        const now = new Date();
+        const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
+        const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+        const progress = ((now - startOfDay) / (endOfDay - startOfDay)) * 100;
+
+        const progressBar = document.getElementById('day-progress-bar');
+        progressBar.style.width = `${progress}%`;
+    }
+
+    function populatePatientList(patients) {
+        const patientList = document.getElementById('patientList');
+        patientList.innerHTML = '';
+
+        patients.forEach((patient, index) => {
+            if (patient.Name && patient.Age && patient.Gender) {
+                const listItem = document.createElement('li');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.classList.add('patient-checkbox');
+                checkbox.dataset.index = index;
+
+                const link = document.createElement('a');
+                link.href = `patient_info.html?patient=${patient.Name}`;
+                link.textContent = `${patient.Name}, ${patient.Age} years, ${patient.Gender}`;
+                
+                listItem.appendChild(checkbox);
+                listItem.appendChild(link);
+                patientList.appendChild(listItem);
+            }
+        });
+    }
+
+    function populatePatientArchive(archive) {
+        const patientArchive = document.getElementById('patientArchive');
+        patientArchive.innerHTML = '';
+
+        archive.forEach(entry => {
+            if (entry.name) {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = `patient_info.html?patient=${entry.name}`;
+                link.textContent = entry.name;
+                listItem.appendChild(link);
+                patientArchive.appendChild(listItem);
+            }
+        });
+    }
+
+    function savePatients(patients) {
+        localStorage.setItem('patients', JSON.stringify(patients));
+    }
+
+    function loadPatients() {
+        const storedPatients = localStorage.getItem('patients');
+        return storedPatients ? JSON.parse(storedPatients) : [];
+    }
+
+    function saveAppointments(appointments) {
+        const formattedAppointments = appointments.map(event => ({
+            ID: event.extendedProps.ID || `#${Math.floor(Math.random() * 10000)}`,
+            Patient: event.title,
+            Gender: event.extendedProps.Gender || 'Unknown',
+            Age: event.extendedProps.Age || 'Unknown',
+            Date: event.start.toISOString().split('T')[0],
+            Time: event.start.toISOString().split('T')[1].substring(0, 5)
+        }));
+        localStorage.setItem('appointments', JSON.stringify(formattedAppointments));
+    }
+
+    function loadAppointments() {
+        const storedAppointments = localStorage.getItem('appointments');
+        return storedAppointments ? JSON.parse(storedAppointments) : [];
+    }
+
+    function loadDashboardData() {
+        const jsonData = {
+            "appointments": loadAppointments(),
+            "patients": loadPatients(),
+            "archive": [],
+            "patientsScheduled": 75
+        };
+
+        const appointments = populateAppointmentsData(jsonData.appointments);
+        createRevenueChart();
+        initializeCalendar(appointments);
+        populatePatientList(jsonData.patients);
+        populatePatientArchive(jsonData.archive);
+        updateProgressCircle(jsonData.patientsScheduled);
+        updateDayProgressBar();
+        setInterval(updateDayProgressBar, 60000); // Update every minute
+    }
+
+    function addPatient() {
+        const newPatient = {
+            Name: prompt("Enter patient name:"),
+            Age: prompt("Enter patient age:"),
+            Gender: prompt("Enter patient gender:"),
+        };
+        const patients = loadPatients();
+        patients.push(newPatient);
+        savePatients(patients);
+        populatePatientList(patients);
+    }
+
+    function toggleEditMode() {
+        const editModeActions = document.getElementById('editModeActions');
+        const patientCheckboxes = document.querySelectorAll('.patient-checkbox');
+        const editModeButton = document.getElementById('toggleEditModeButton');
+
+        if (editModeButton.textContent === 'Edit Mode') {
+            editModeButton.textContent = 'Cancel Edit Mode';
+            editModeActions.style.display = 'flex';
+            patientCheckboxes.forEach(checkbox => {
+                checkbox.style.display = 'inline';
+            });
+        } else {
+            editModeButton.textContent = 'Edit Mode';
+            editModeActions.style.display = 'none';
+            patientCheckboxes.forEach(checkbox => {
+                checkbox.style.display = 'none';
+                checkbox.checked = false;
+            });
+        }
+    }
+
+    function deleteSelectedPatients() {
+        if (confirm("Are you sure you want to delete the selected patients?")) {
+            const patients = loadPatients();
+            const patientCheckboxes = document.querySelectorAll('.patient-checkbox:checked');
+            const indicesToDelete = Array.from(patientCheckboxes).map(checkbox => parseInt(checkbox.dataset.index));
+
+            const updatedPatients = patients.filter((_, index) => !indicesToDelete.includes(index));
+            savePatients(updatedPatients);
+            populatePatientList(updatedPatients);
+            toggleEditMode();
+        }
+    }
+
+    document.getElementById('addPatientButton').addEventListener('click', addPatient);
+    document.getElementById('toggleEditModeButton').addEventListener('click', toggleEditMode);
+    document.getElementById('deleteSelectedButton').addEventListener('click', deleteSelectedPatients);
+
+    window.onload = loadDashboardData;
+</script>
+
+</body>
+</html>
